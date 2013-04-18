@@ -1,0 +1,24 @@
+{% extends 'recoLayout.jinja2.html' %}
+{% from 'util.jinja2.html' import link_tag, js_tag %}
+
+{% block title %}Rate it and get it!{% endblock %}
+
+{% block css %}
+        {{ link_tag('main') }}
+{% endblock %}
+{% block body %}
+<form method='POST'>
+  <fieldset>
+    <legend>{{movie.title}}</legend>
+    <div id="star"></div>
+     
+    <label>Your Rating</label>
+     <div class="form-actions">
+	 <button type="submit" class="btn btn-primary"> Submit</button>
+</fieldset>	
+  </form>
+
+  <script type="text/javascript">
+   	   	 $('#star').raty({ path: '/static/css/img/', scoreName: "request.form['rating']",score:0});
+   </script>
+{% endblock %}

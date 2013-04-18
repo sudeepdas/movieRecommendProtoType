@@ -1,0 +1,15 @@
+{% extends 'recoLayout.jinja2.html' %}
+{% from 'util.jinja2.html' import link_tag, js_tag %}
+
+{% block title %}About this page{% endblock %}
+
+{% block css %}
+        {{ link_tag('main') }}
+{% endblock %}
+
+{% block body%}
+
+Movie Recommendation based on MovieLens dataset.
+
+<i class="icon-leaf"></i>  Sudeep Das 
+{% endblock %}
