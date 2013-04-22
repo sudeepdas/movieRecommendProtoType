@@ -1,4 +1,4 @@
-{% extends 'recoLayout.jinja2.html' %}
+{% extends 'myindex.jinja2.html' %}
 {% from 'util.jinja2.html' import link_tag, js_tag %}
 
 {% block title %}Rate it and get it!{% endblock %}
@@ -7,27 +7,27 @@
         {{ link_tag('main') }}
 {% endblock %}
 {% block body %}
-<p class='text-info' > Hello, {{uname}}!  <br>
- First, let's get started with some ratings from you. <br> 
- If you have not seen a movie, just skip 
- it by pressing the submit button. 
+<p class='text-warning' >  {{uname}}, now 
+	that you have rated more than 20 movies, 
+	we can generate some recommendations for you.  
+ 	You can continue to rate more movies to improve 
+ 	your recommendations, or you can press the recommendation 
+ 	button.  
 </p>
-
 <form method='POST'>
   <fieldset>
     <legend>{{g.movie.title}}</legend>
-    
     <div id="star"></div>
      
     <label>Your Rating</label>
      <div class="form-actions">
-	 <button type="submit" class="btn btn-primary" > Submit</button>
+	 <button type="submit" class="btn btn-primary"> Submit</button>
 </fieldset>	
   </form>
 
   <script type="text/javascript">
    	   	 $('#star').raty({ path: '/static/css/img/', scoreName: "request.form['rating']",score:0});
    </script>
-{% endblock %}
-{% block bodyext %}
+
+<a class="btn" href="/reco/">Recommendations</a>
 {% endblock %}

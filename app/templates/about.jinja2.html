@@ -9,7 +9,17 @@
 
 {% block body%}
 
-Movie Recommendation based on MovieLens dataset.
+Movie Recommendation based on  the MovieLens dataset.
+<br>
+Uses adjusted cosine based item-similarity collaborative filtering to predict movies. 
+This prototype uses Python/Flask with Twitter Bootstrap rendering. 
+<br>
+The item-based similarity table and the user inputs are stored using a MongoDB database, 
+manipulated through pyMongo. 
+<br> Backend data wrangling, and simmilarity table building were done with heavy use of
+mumpy. scipy and pandas. 
 
+
+<br>
 <i class="icon-leaf"></i>  Sudeep Das 
 {% endblock %}
