@@ -1,0 +1,8 @@
+Flask==0.9
+Jinja2==2.6
+Werkzeug==0.8.3
+gunicorn==0.17.4
+ipython==0.13.2
+numpy==1.7.1
+pymongo==2.5
+wsgiref==0.1.2
